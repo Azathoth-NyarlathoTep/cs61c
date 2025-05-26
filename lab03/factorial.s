@@ -7,8 +7,10 @@ n: .word 8
 main:
     la t0, n
     lw a0, 0(t0)
+    addi t1, x0, 1
     jal ra, factorial
 
+    addi a0, t1, 0
     addi a1, a0, 0
     addi a0, x0, 1
     ecall # Print Result
@@ -21,4 +23,11 @@ main:
     ecall # Exit
 
 factorial:
-    # YOUR CODE HERE
+    bne a0, x0, continue  
+    jalr x0, ra, 0
+
+continue:
+    mul t1, t1, a0
+    addi a0, a0, -1
+    jal x0, factorial
+    

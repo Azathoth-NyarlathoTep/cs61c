@@ -1,5 +1,8 @@
 .globl main
 
+# The Answer
+# 1. the register representing the variable is 
+
 .data
 source:
     .word   3

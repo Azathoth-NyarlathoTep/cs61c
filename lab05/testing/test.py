@@ -10,8 +10,15 @@ import re
 import sys
 import shutil
 
+# 若不用wsl的远程连接才能正常运行，这是因为该文件存在windows的目录下却运行在wsl的远程连接中，存在部分权限问题，因而以后最好直接全部在其中一个系统中运行
+# 但现在仍未知道为什么这个lab放在wsl的目录下用远程连接会错误运行，但鉴于在windows能跑就先搁置了
 file_locations = os.getcwd()
-logisim_location = os.path.join(os.getcwd(),"logisim-evolution.jar")
+# file_locations = os.getcwd()
+# logisim_location = os.path.join("D:/cs61c/lab05/testing/logisim-evolution.jar")
+logisim_location = os.path.join(os.getcwd(), "logisim-evolution.jar")
+print(f"DEBUG: Current working directory in test.py: {os.getcwd()}") # 打印当前工作目录
+print(f"DEBUG: Attempting to use Logisim from: {logisim_location}") # 打印 Logisim 路径
+print(f"DEBUG: Does Logisim JAR exist at this path? {os.path.exists(logisim_location)}") # 检查文件是否存在
 
 class TestCase():
   """

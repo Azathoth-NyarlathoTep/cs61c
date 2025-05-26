@@ -13,6 +13,7 @@ end_msg:    .asciiz "Lists after: \n"
 .text
 main:
     jal create_default_list
+    # a0 and a1 have been initialized
     mv s0, a0   # v0 = s0 is head of node list
 
     #print "lists before: "

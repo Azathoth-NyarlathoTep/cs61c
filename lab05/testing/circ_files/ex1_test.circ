@@ -342,6 +342,13 @@ end TCL_Generic;
     <comp lib="10" loc="(630,420)" name="MUX4"/>
     <comp lib="3" loc="(140,130)" name="Adder"/>
     <comp lib="3" loc="(220,220)" name="Comparator"/>
+    <comp lib="4" loc="(130,970)" name="ROM">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 8 1
+0
+</a>
+      <a name="dataWidth" val="1"/>
+    </comp>
     <comp lib="4" loc="(1310,640)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 1
